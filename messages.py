@@ -6,10 +6,10 @@ st.header("HI")
 from dotenv import load_dotenv
 
 load_dotenv()
-api_key=os.getenv("GOOGLE_API_KEY")
+# api_key=os.getenv("GOOGLE_API_KEY")
 model=ChatGoogleGenerativeAI(
     model='gemini-3.6-flash',
-    google_api_key=api_key)
+    GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY"))
 
 messages=[
     SystemMessage(content='You are a Helpful assistant'),
