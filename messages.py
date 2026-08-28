@@ -7,7 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 api_key=os.getenv("GOOGLE_API_KEY")
-model=ChatGoogleGenerativeAI(model='gemini-3.6-flash')
+model=ChatGoogleGenerativeAI(
+    model='gemini-3.6-flash',
+    google_api_key=api_key)
 
 messages=[
     SystemMessage(content='You are a Helpful assistant'),
